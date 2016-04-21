@@ -1,17 +1,17 @@
-OBJS=raspberry_pi_revision.o test.o
-BIN=test
+OBJS=raspberry_pi_revision.o rpiinfo.o
+BIN=rpiinfo
 
+DEBUG=-g
 CFLAGS+=-Wall -g -O3
-LDFLAGS+=-ldl
 
 all: $(BIN)
 
 %.o: %.c
 	@rm -f $@ 
-	$(CC) $(CFLAGS) $(INCLUDES) -g -c $< -o $@ -Wno-deprecated-declarations
+	$(CC) $(CFLAGS) $(INCLUDES) $(DEBUG) -c $< -o $@ -Wno-deprecated-declarations
 
 $(BIN): $(OBJS)
-	$(CC) -o $@ $(OBJS) $(LDFLAGS)
+	$(CC) $(DEBUG) -o $@ $(OBJS) $(LDFLAGS)
 
 clean:
 	@rm -f $(OBJS)
