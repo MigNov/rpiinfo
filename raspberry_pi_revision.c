@@ -231,7 +231,11 @@ static RASPBERRY_PI_MODEL_T bitFieldToModel[] =
     RPI_COMPUTE_MODULE,
     RPI_MODEL_UNKNOWN,
     RPI_MODEL_B_PI_3,
-    RPI_MODEL_ZERO
+    RPI_MODEL_ZERO,
+    RPI_MODEL_ZERO_W,
+    RPI_COMPUTE_MODULE_3,
+    RPI_MODEL_B_PI_2_EMBEST,
+    RPI_MODEL_B_PI_3_PLUS
 };
 
 static RASPBERRY_PI_MODEL_T revisionToModel[] =
@@ -713,6 +717,26 @@ raspberryPiModelToString(
     case RPI_MODEL_B_PI_3:
 
         string = "Model B Pi 3";
+        break;
+
+    case RPI_MODEL_ZERO_W:
+
+        string = "Model Zero W";
+        break;
+
+    case RPI_COMPUTE_MODULE_3:
+
+        string = "Compute Module 3";
+        break;
+
+    case RPI_MODEL_B_PI_2_EMBEST:
+
+        string = "Model B Pi 2 Embest";
+        break;
+
+    case RPI_MODEL_B_PI_3_PLUS:
+
+        string = "Model B+ Pi 3";
         break;
 
     default:

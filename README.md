@@ -3,6 +3,8 @@
 C function to decode the Revision: field of /proc/cpuinfo on the Raspberry
 Pi. 
 
+For more up-to-date information please visit: https://www.raspberrypi.org/documentation/hardware/raspberrypi/revision-codes/README.md
+
 # Known revisions
 
 The file /proc/cpuinfo contains a line such as:-
